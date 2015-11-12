@@ -2,10 +2,12 @@ const koa = require('koa');
 
 const app = koa();
 
+const port = 8008;
+
 app.use(function *(){
   this.body = 'Hello Node!';
 });
 
-app.listen(8000, function(){
-  console.log('listen on', 8000);
+app.listen(port, function(){
+  console.log('listening on port', port);
 })
